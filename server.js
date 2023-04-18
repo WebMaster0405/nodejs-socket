@@ -6,7 +6,7 @@ const httpServer = createServer();
 const io = new Server(httpServer, {
   cors: {
     // origin: "https://localhost:8100"
-    origin: 'https://vocal-mermaid-1462e4.netlify.app/',
+    origin: 'https://vocal-mermaid-1462e4.netlify.app',
   }
 });
 io.on('connection', client => {
