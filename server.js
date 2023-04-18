@@ -18,7 +18,7 @@ const io = new Server(httpServer, {
 //     methods: ["GET", "POST"]
 //   }
 // });
-io.origins('*:*')
+io.set('origins', '*:*');
 io.on('connection', client => {
   client.on('subscribeToServer', interval => {
     console.log(
