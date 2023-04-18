@@ -6,19 +6,9 @@ const httpServer = createServer();
 const io = new Server(httpServer, {
   cors: {
     // origin: "https://localhost:8100"
-    origin: "*",
+    origin: '*:*',
   }
 });
-
-
-// const io = new Server(httpServer, {
-//   cors: {
-//     // origin: "https://localhost:8100"
-//     origin: "*",
-//     methods: ["GET", "POST"]
-//   }
-// });
-io.set('origins', '*:*');
 io.on('connection', client => {
   client.on('subscribeToServer', interval => {
     console.log(
